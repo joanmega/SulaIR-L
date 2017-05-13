@@ -542,11 +542,6 @@ public class Aplicacion extends javax.swing.JFrame {
         jdAyuda.setMinimumSize(new java.awt.Dimension(758, 300));
         jdAyuda.setModal(true);
         jdAyuda.setResizable(false);
-        jdAyuda.addWindowListener(new java.awt.event.WindowAdapter() {
-            public void windowOpened(java.awt.event.WindowEvent evt) {
-                jdAyudaWindowOpened(evt);
-            }
-        });
 
         pContenidos.setBorder(javax.swing.BorderFactory.createTitledBorder("Contenidos"));
 
@@ -841,11 +836,6 @@ public class Aplicacion extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(1280, 750));
         setPreferredSize(new java.awt.Dimension(1280, 750));
         setResizable(false);
-        addComponentListener(new java.awt.event.ComponentAdapter() {
-            public void componentShown(java.awt.event.ComponentEvent evt) {
-                formComponentShown(evt);
-            }
-        });
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowOpened(java.awt.event.WindowEvent evt) {
                 formWindowOpened(evt);
@@ -3488,10 +3478,6 @@ public class Aplicacion extends javax.swing.JFrame {
 		
     }//GEN-LAST:event_bBusquedaActionPerformed
 
-    private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
-
-    }//GEN-LAST:event_formComponentShown
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 		Desktop desktop = Desktop.isDesktopSupported() ? Desktop.getDesktop() : null;
 		if (desktop != null && desktop.isSupported(Desktop.Action.BROWSE)) {
@@ -3508,10 +3494,6 @@ public class Aplicacion extends javax.swing.JFrame {
 		jdAcercaDe.setLocation(dim.width/2-jdAcercaDe.getSize().width/2, dim.height/2-jdAcercaDe.getSize().height/2);
 		jdAcercaDe.setVisible(true);
     }//GEN-LAST:event_bAcercaDeActionPerformed
-
-    private void jdAyudaWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_jdAyudaWindowOpened
-
-    }//GEN-LAST:event_jdAyudaWindowOpened
 
     private void bAyudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAyudaActionPerformed
 		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
