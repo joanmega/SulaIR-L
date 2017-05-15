@@ -34,7 +34,7 @@ public class SulaIRL {
 		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
 			java.util.logging.Logger.getLogger(SulaIRL.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 		}
-
+		
 		// Creamos el frame de bienvenida y lo centramos en la pantalla.
         Principal p = new Principal();
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();

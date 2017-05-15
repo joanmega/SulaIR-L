@@ -436,7 +436,7 @@ public class Coleccion {
 		ArchivosColeccion ar = new ArchivosColeccion(file.getNumArchivo(), archivoOri.getPath());
 		archivoOriginal.replace(file.getNumArchivo(), ar);
 		Files.write(textoOriginal, archivoOri, Charset.forName("UTF-8"));
-		textoTokenizado = textoTokenizado.replaceAll("( )+", " ").replaceAll("^\\w\\p{Digit}+|[^\\w]\\p{Digit}+|\\p{Punct}", " ").replaceAll("[,.!?;:\\-]", "$0 ").replaceAll("(\\r|\\n|\\r\\n|\\t|\\s)+", " ").replaceAll("^\\s+","").replace("-", " ");
+		textoTokenizado = textoTokenizado.replaceAll("\\p{Digit}","").replaceAll("( )+", " ").replaceAll("^\\w\\p{Digit}+|[^\\w]\\p{Digit}+|\\p{Punct}", " ").replaceAll("[,.!?;:\\-]", "$0 ").replaceAll("(\\r|\\n|\\r\\n|\\t|\\s)+", " ").replaceAll("^\\s+","").replace("-", " ");
 		textoTokenizado = StringUtils.stripAccents(textoTokenizado);
 		// Almacenamos el archivo tokenizado.
 		archivoTok = new File(rutaColeccion + "archivos/tokenizados/" + FilenameUtils.removeExtension(ficheroOri.getName()) + ".txt");
