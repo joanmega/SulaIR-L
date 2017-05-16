@@ -3210,30 +3210,34 @@ public class Aplicacion extends javax.swing.JFrame {
     }//GEN-LAST:event_tBusquedaVectorialActionPerformed
 
     private void jTablaDocVectorialMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTablaDocVectorialMouseClicked
-		ArchivosColeccion original = col.getArchivoOriginal().get(Integer.parseInt(jTablaDocVectorial.getValueAt(jTablaDocVectorial.getSelectedRow(), 0).toString()));
-		try {
-			tDocVectorial.setText(jTablaDocVectorial.getValueAt(jTablaDocVectorial.getSelectedRow(), 1).toString());
-			String textoFichero = FileUtils.readFileToString(new File(original.getRutaFichero()), "UTF-8");
-			String consulta =  tBusquedaVectorial.getText();
-			Analyzer analyzer = new StandardAnalyzer();
-			if (col.getStopWord() != null){
-				analyzer = new StandardAnalyzer(new FileReader(col.getStopWord()));
+		if (jTablaDocVectorial.isRowSelected(jTablaDocVectorial.getSelectedRow())){
+			ArchivosColeccion original = col.getArchivoOriginal().get(Integer.parseInt(jTablaDocVectorial.getValueAt(jTablaDocVectorial.getSelectedRow(), 0).toString()));
+			try {
+				tDocVectorial.setText(jTablaDocVectorial.getValueAt(jTablaDocVectorial.getSelectedRow(), 1).toString());
+				String textoFichero = FileUtils.readFileToString(new File(original.getRutaFichero()), "UTF-8");
+				String consulta =  tBusquedaVectorial.getText();
+				Analyzer analyzer = new StandardAnalyzer();
+				if (col.getStopWord() != null){
+					analyzer = new StandardAnalyzer(new FileReader(col.getStopWord()));
+				}
+				consulta = indice.procesarStringConsulta(consulta, analyzer);
+				Query query = new QueryParser("text", new StandardAnalyzer()).parse(consulta);
+	//			textoFichero = textoFichero.replace("\n", "<br>");
+				Scorer scorer = new QueryScorer(query);
+				Highlighter highlighter = new Highlighter(scorer);
+				highlighter.setTextFragmenter(new SimpleSpanFragmenter((QueryScorer) scorer, Integer.MAX_VALUE));
+				highlighter.setMaxDocCharsToAnalyze(Integer.MAX_VALUE);
+				TokenStream tokenStream = new SimpleAnalyzer().tokenStream(null, new StringReader(textoFichero));
+				tPanelDocVectorial.setDocument(new HTMLDocument());
+				tPanelDocVectorial.getDocument().putProperty("IgnoreCharsetDirective", true);
+				tPanelDocVectorial.setText(highlighter.getBestFragment(tokenStream, textoFichero));
+				tPanelDocVectorial.setCaretPosition(0);
+				bExplanationVec.setEnabled(true);
+			} catch (IOException | InvalidTokenOffsetsException | ParseException ex) {
+				Logger.getLogger(Aplicacion.class.getName()).log(Level.SEVERE, null, ex);
 			}
-			consulta = indice.procesarStringConsulta(consulta, analyzer);
-			Query query = new QueryParser("text", new StandardAnalyzer()).parse(consulta);
-//			textoFichero = textoFichero.replace("\n", "<br>");
-			Scorer scorer = new QueryScorer(query);
-			Highlighter highlighter = new Highlighter(scorer);
-			highlighter.setTextFragmenter(new SimpleSpanFragmenter((QueryScorer) scorer, Integer.MAX_VALUE));
-			highlighter.setMaxDocCharsToAnalyze(Integer.MAX_VALUE);
-			TokenStream tokenStream = new SimpleAnalyzer().tokenStream(null, new StringReader(textoFichero));
-			tPanelDocVectorial.setDocument(new HTMLDocument());
-			tPanelDocVectorial.getDocument().putProperty("IgnoreCharsetDirective", true);
-			tPanelDocVectorial.setText(highlighter.getBestFragment(tokenStream, textoFichero));
-			tPanelDocVectorial.setCaretPosition(0);
-			bExplanationVec.setEnabled(true);
-		} catch (IOException | InvalidTokenOffsetsException | ParseException ex) {
-			Logger.getLogger(Aplicacion.class.getName()).log(Level.SEVERE, null, ex);
+		}else{
+				bExplanationVec.setEnabled(false);
 		}
     }//GEN-LAST:event_jTablaDocVectorialMouseClicked
 
@@ -3368,30 +3372,34 @@ public class Aplicacion extends javax.swing.JFrame {
     }//GEN-LAST:event_bBusquedaProbActionPerformed
 
     private void jTablaDocProbMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTablaDocProbMouseClicked
-		ArchivosColeccion original = col.getArchivoOriginal().get(Integer.parseInt(jTablaDocProb.getValueAt(jTablaDocProb.getSelectedRow(), 0).toString()));
-		try {
-			tDocProb.setText(jTablaDocProb.getValueAt(jTablaDocProb.getSelectedRow(), 1).toString());
-			String textoFichero = FileUtils.readFileToString(new File(original.getRutaFichero()), "UTF-8");
-			String consulta =  tBusquedaProb.getText();
-			Analyzer analyzer = new StandardAnalyzer();
-			if (col.getStopWord() != null){
-				analyzer = new StandardAnalyzer(new FileReader(col.getStopWord()));
+		if (jTablaDocProb.isRowSelected(jTablaDocProb.getSelectedRow())){
+			ArchivosColeccion original = col.getArchivoOriginal().get(Integer.parseInt(jTablaDocProb.getValueAt(jTablaDocProb.getSelectedRow(), 0).toString()));
+			try {
+				tDocProb.setText(jTablaDocProb.getValueAt(jTablaDocProb.getSelectedRow(), 1).toString());
+				String textoFichero = FileUtils.readFileToString(new File(original.getRutaFichero()), "UTF-8");
+				String consulta =  tBusquedaProb.getText();
+				Analyzer analyzer = new StandardAnalyzer();
+				if (col.getStopWord() != null){
+					analyzer = new StandardAnalyzer(new FileReader(col.getStopWord()));
+				}
+				consulta = indice.procesarStringConsulta(consulta, analyzer);
+				Query query = new QueryParser("text", new StandardAnalyzer()).parse(consulta);
+	//			textoFichero = textoFichero.replace("\n", "<br>");
+				Scorer scorer = new QueryScorer(query);
+				Highlighter highlighter = new Highlighter(scorer);
+				highlighter.setTextFragmenter(new SimpleSpanFragmenter((QueryScorer) scorer, Integer.MAX_VALUE));
+				highlighter.setMaxDocCharsToAnalyze(Integer.MAX_VALUE);
+				TokenStream tokenStream = new SimpleAnalyzer().tokenStream(null, new StringReader(textoFichero));
+				tPanelDocProb.setDocument(new HTMLDocument());
+				tPanelDocProb.getDocument().putProperty("IgnoreCharsetDirective", true);
+				tPanelDocProb.setText(highlighter.getBestFragment(tokenStream, textoFichero));
+				tPanelDocProb.setCaretPosition(0);
+				bExplanationProb.setEnabled(true);
+			} catch (IOException | InvalidTokenOffsetsException | ParseException ex) {
+				Logger.getLogger(Aplicacion.class.getName()).log(Level.SEVERE, null, ex);
 			}
-			consulta = indice.procesarStringConsulta(consulta, analyzer);
-			Query query = new QueryParser("text", new StandardAnalyzer()).parse(consulta);
-//			textoFichero = textoFichero.replace("\n", "<br>");
-			Scorer scorer = new QueryScorer(query);
-			Highlighter highlighter = new Highlighter(scorer);
-			highlighter.setTextFragmenter(new SimpleSpanFragmenter((QueryScorer) scorer, Integer.MAX_VALUE));
-			highlighter.setMaxDocCharsToAnalyze(Integer.MAX_VALUE);
-			TokenStream tokenStream = new SimpleAnalyzer().tokenStream(null, new StringReader(textoFichero));
-			tPanelDocProb.setDocument(new HTMLDocument());
-			tPanelDocProb.getDocument().putProperty("IgnoreCharsetDirective", true);
-			tPanelDocProb.setText(highlighter.getBestFragment(tokenStream, textoFichero));
-			tPanelDocProb.setCaretPosition(0);
-			bExplanationProb.setEnabled(true);
-		} catch (IOException | InvalidTokenOffsetsException | ParseException ex) {
-			Logger.getLogger(Aplicacion.class.getName()).log(Level.SEVERE, null, ex);
+		}else{
+			bExplanationProb.setEnabled(false);
 		}
     }//GEN-LAST:event_jTablaDocProbMouseClicked
 
