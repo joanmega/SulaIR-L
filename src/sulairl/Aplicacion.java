@@ -3418,6 +3418,8 @@ public class Aplicacion extends javax.swing.JFrame {
             String ficheroStemming = indice.getFicheroStemming(docID);
             File f = new File (ficheroStemming);
 
+			TFIDFSimilarity similarity = new ClassicSimilarity();
+			
             // Establecemos el tf x idf del término en el documento seleccionado en el documento.
             int idDoc = (int)jTablaPosiciones.getValueAt(jTablaPosiciones.getSelectedRow(), 0);
 			Path p = Paths.get(col.getRutaColeccion() + "indice/");  // Indicamos la carpeta del índice
@@ -3428,10 +3430,11 @@ public class Aplicacion extends javax.swing.JFrame {
 			PostingsEnum docEnum = MultiFields.getTermDocsEnum(ireader, "text", t.bytes());
             while ((docEnum.nextDoc()) != PostingsEnum.NO_MORE_DOCS) {
 				if (idDoc == docEnum.docID()){
-					double tf = 1+Math.log((docEnum.freq() * Float.parseFloat(jTablaIndiceCompleto.getValueAt(jTablaIndiceCompleto.getSelectedRow(), 3).toString())));
-					BigDecimal bd = new BigDecimal(tf);
+					double tf_idf = (similarity.tf(docEnum.freq()) * Double.parseDouble(jTablaIndiceCompleto.getValueAt(jTablaIndiceCompleto.getSelectedRow(), 4).toString()));
+					BigDecimal bd = new BigDecimal(tf_idf);
 					bd = bd.setScale(4, BigDecimal.ROUND_HALF_UP);
 					lTfxIdf.setText(""+ bd);
+					System.out.println(similarity.tf(docEnum.freq()) + " x " + Float.parseFloat(jTablaIndiceCompleto.getValueAt(jTablaIndiceCompleto.getSelectedRow(), 4).toString()) + " = " + tf_idf);
 				}
             }
             if (!lArchivoStemmingIndice.getText().equals(f.getName())){
