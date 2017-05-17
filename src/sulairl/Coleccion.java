@@ -421,7 +421,7 @@ public class Coleccion {
 		//Parseamos el stream
 		parser.parse(input, ch, metadata, parseContext);
 		String textoOriginal = ch.toString();
-		textoOriginal = textoOriginal.replaceAll("[\u4E00-\u9FA5]|´","").replaceAll("\\s*(\\p{Alpha}*)(\\p{Digit}+)(\\p{Alpha}*)\\s*", "$1 $2 $3").replaceAll("[\\[\\]|’,.!?;:/\\)\\(\\-−=_]", " $0 ").replaceAll("(\\r|\\n|\\r\\n|\\t|\\s| )+", " ").replaceAll("^\\s+","").replaceAll("( )+", " ").replace("-|^\\p{ASCII}", " ").replaceAll("( )+|\\%\\p{Alnum}+\\%?", " ");
+		textoOriginal = textoOriginal.replaceAll("[\u4E00-\u9FA5]|´|ʊ|ª","").replaceAll("\\s*(\\p{Alpha}*)(\\p{Digit}+)(\\p{Alpha}*)\\s*", "$1 $2 $3").replaceAll("[\\[\\]|’,.!?;:/\\)\\(\\-−=_]", " $0 ").replaceAll("(\\r|\\n|\\r\\n|\\t|\\s| )+", " ").replaceAll("^\\s+","").replaceAll("( )+", " ").replace("-|^\\p{ASCII}", " ").replaceAll("( )+|\\%\\p{Alnum}+\\%?", " ");
 		TokenStream ts = analyzer.tokenStream(null, new StringReader(textoOriginal));
 		try {
 			ts.reset();
@@ -436,7 +436,7 @@ public class Coleccion {
 		ArchivosColeccion ar = new ArchivosColeccion(file.getNumArchivo(), archivoOri.getPath());
 		archivoOriginal.replace(file.getNumArchivo(), ar);
 		Files.write(textoOriginal, archivoOri, Charset.forName("UTF-8"));
-		textoTokenizado = textoTokenizado.replaceAll("\\p{Digit}","").replaceAll("( )+", " ").replaceAll("^\\w\\p{Digit}+|[^\\w]\\p{Digit}+|\\p{Punct}", " ").replaceAll("[,.!?;:\\-]", "$0 ").replaceAll("(\\r|\\n|\\r\\n|\\t|\\s)+", " ").replaceAll("^\\s+","").replace("-", " ");
+		textoTokenizado = textoTokenizado.replaceAll("\\p{Digit}","").replaceAll("( )+", " ").replaceAll("^\\w\\p{Digit}+|[^\\w]\\p{Digit}+|\\p{Punct}", " ").replaceAll("[’,.!?;:\\-]", "$0 ").replaceAll("(\\r|\\n|\\r\\n|\\t|\\s)+", " ").replaceAll("^\\s+","").replace("-", " ");
 		textoTokenizado = StringUtils.stripAccents(textoTokenizado);
 		// Almacenamos el archivo tokenizado.
 		archivoTok = new File(rutaColeccion + "archivos/tokenizados/" + FilenameUtils.removeExtension(ficheroOri.getName()) + ".txt");
