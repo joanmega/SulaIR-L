@@ -3779,13 +3779,13 @@ public class Aplicacion extends javax.swing.JFrame {
 			//			System.out.println("Compara: " + palabraOriginal.toLowerCase().trim() + "(" + palabraOriginal.length() + ") - " + palabraTokenizada + "(" + palabraTokenizada.length() + ")");
 						String pre = "", palabra, post = "";
 						palabra = palabraOriginal;
-						Pattern ptt = Pattern.compile("^[\\p{Punct}–•¡¿»«—\\+\\-@#©/…|ʊ°®−=~“”²³†ª\\&\\’\\‘\\“\\”]+");
+						Pattern ptt = Pattern.compile("^[\\p{Punct}–•¡¿»«—\\+\\-@#©/.[()]…|ʊ°®−=~“”²³†ª\\&\\’\\‘\\“\\”]+");
 						Matcher m = ptt.matcher(palabra);
 						if (m.find()){
                             pre = m.group(0);
 						}
 						palabra = m.replaceAll("");
-						Pattern pt2 = Pattern.compile("[\\p{Punct}–•¡¿»«—+\\-@#©/.[()]…|ʊ°®−=~“”²³†ª\\&\\’\\‘\\“\\”]+");
+						Pattern pt2 = Pattern.compile("[\\p{Punct}–•¡¿»«—\\+\\-@#©/.[()]…|ʊ°®−=~“”²³†ª\\&\\’\\‘\\“\\”]+");
 						Matcher m2 = pt2.matcher(palabra);
 						if (m2.find()){
                             post = m2.group(0);

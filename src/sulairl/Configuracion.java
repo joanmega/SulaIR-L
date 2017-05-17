@@ -763,7 +763,7 @@ public class Configuracion extends javax.swing.JFrame{
 			}else{
 				col = new Coleccion(jListaColecciones.getSelectedItem().toString(), SulaIRL.archivoConf.getEtapa(), SulaIRL.archivoConf.getIdioma(), docOriginales, SulaIRL.archivoConf.getStopWord());
 				if (col.getArchivoOriginal().size() != numDocumentosColeccion || col.getArchivoStemizados().size() != numDocumentosColeccion
-					|| col.getArchivoTokenizados().size() != numDocumentosColeccion || (col.getArchivoOriginal().size() !=  numDocumentosColeccion && col.getStopWord() != null)){
+					|| col.getArchivoTokenizados().size() != numDocumentosColeccion || (col.getArchivoStopWords().size() !=  numDocumentosColeccion && col.getStopWord() != null)){
 					jdCargarColeccion.dispose();
 					JOptionPane.showOptionDialog(this, ResourceBundle.getBundle("etiquetas.Etiquetas_"+SulaIRL.idioma).getString("etiqueta_optionDialog_numDocProcesadosErroneo"),
 						ResourceBundle.getBundle("etiquetas.Etiquetas_"+SulaIRL.idioma).getString("etiqueta_label_atencion"),

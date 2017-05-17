@@ -421,7 +421,7 @@ public class Coleccion {
 		//Parseamos el stream
 		parser.parse(input, ch, metadata, parseContext);
 		String textoOriginal = ch.toString();
-		textoOriginal = textoOriginal.replaceAll("[\u4E00-\u9FA5]|´","").replaceAll("\\s*(\\p{Alpha}*)(\\p{Digit}+)(\\p{Alpha}*)\\s*", "$1 $2 $3").replaceAll("[\\[\\]|,.!?;:/\\)\\(\\-−=]", " $0 ").replaceAll("(\\r|\\n|\\r\\n|\\t|\\s| )+", " ").replaceAll("^\\s+","").replaceAll("( )+", " ").replace("-|^\\p{ASCII}", " ").replaceAll("( )+|\\%\\p{Alnum}+\\%?", " ");
+		textoOriginal = textoOriginal.replaceAll("[\u4E00-\u9FA5]|´","").replaceAll("\\s*(\\p{Alpha}*)(\\p{Digit}+)(\\p{Alpha}*)\\s*", "$1 $2 $3").replaceAll("[\\[\\]|’,.!?;:/\\)\\(\\-−=_]", " $0 ").replaceAll("(\\r|\\n|\\r\\n|\\t|\\s| )+", " ").replaceAll("^\\s+","").replaceAll("( )+", " ").replace("-|^\\p{ASCII}", " ").replaceAll("( )+|\\%\\p{Alnum}+\\%?", " ");
 		TokenStream ts = analyzer.tokenStream(null, new StringReader(textoOriginal));
 		try {
 			ts.reset();
