@@ -4586,6 +4586,7 @@ public class Aplicacion extends javax.swing.JFrame {
 			lNumTerminosIndice.setText(ResourceBundle.getBundle("etiquetas.Etiquetas_"+SulaIRL.idioma).getString("etiqueta_label_indexacion_numTerminosIndice"));
 			lVersionIndice1.setText(ResourceBundle.getBundle("etiquetas.Etiquetas_"+SulaIRL.idioma).getString("etiqueta_label_indexacion_versionIndice"));
 			jLabel15.setText(ResourceBundle.getBundle("etiquetas.Etiquetas_"+SulaIRL.idioma).getString("etiqueta_label_archivo"));
+			bBusqueda.setText(ResourceBundle.getBundle("etiquetas.Etiquetas_"+SulaIRL.idioma).getString("label_button_indice_siguienteEtapa"));
 			
 			
 			// Gráficas

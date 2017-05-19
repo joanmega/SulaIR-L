@@ -171,6 +171,7 @@ public class Etiquetas_es extends ListResourceBundle{
 					{"label_columna_termino", "Término"},
 					{"label_columna_numDocumentos", "Num. Documentos"},
 					{"label_columna_numOcurrencias", "Frecuencia en la colección"},
+					{"label_button_indice_siguienteEtapa", "Siguiente etapa"},
 				
 				// Gráficas
 				
