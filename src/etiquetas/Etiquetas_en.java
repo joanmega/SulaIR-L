@@ -28,7 +28,7 @@ public class Etiquetas_en extends ListResourceBundle{
 			{"etiqueta_boton_entrar", "Enter"},
 			{"etiqueta_borde_idioma", "Language"},
 			{"etiqueta_label_desc1", "Application for learning and teaching"},
-			{"etiqueta_label_desc2", "of lucene-based information retrieval"},
+			{"etiqueta_label_desc2", " Information Retrieval based on Lucene"},
 		
 		// Ventana de configuración
 		

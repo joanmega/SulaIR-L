@@ -1,8 +1,6 @@
 package etiquetas;
 
 import java.util.ListResourceBundle;
-import java.util.ResourceBundle;
-import sulairl.SulaIRL;
 
 /**
  *

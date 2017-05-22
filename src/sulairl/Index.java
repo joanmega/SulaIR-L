@@ -60,23 +60,23 @@ public class Index {
 	
     private final Coleccion col;
     private int numTerms;
-    IndexWriter iwriter;
-    IndexReader ireader;
-	IndexSearcher searcherVec;
-	IndexSearcher searcherBool;
-	IndexSearcher searcherProb;
-    Directory directory;
-    DirectoryReader directoryReader;
-	Query queryVec;
-	Query queryBool;
-	Query queryProb;
-	String consVec;
-	String consBool;
-	String consProb;
-	String consBoolLucene;
-	long timeVec;
-	long timeBool;
-	long timeProb;
+    private IndexWriter iwriter;
+    private IndexReader ireader;
+	private IndexSearcher searcherVec;
+	private IndexSearcher searcherBool;
+	private IndexSearcher searcherProb;
+    private Directory directory;
+	private  DirectoryReader directoryReader;
+	private Query queryVec;
+	private Query queryBool;
+	private Query queryProb;
+	private String consVec;
+	private String consBool;
+	private String consProb;
+	private String consBoolLucene;
+	private long timeVec;
+	private long timeBool;
+	private long timeProb;
 	
 	/**
 	 * Constructor por defecto de un tipo Index
@@ -256,8 +256,13 @@ public class Index {
 		if (iwriter != null){
 			iwriter.close();
 		}
+		searcherBool = null;
+		searcherProb = null;
+		searcherVec = null;
 		directory.close();
 		directoryReader.close();
+		Runtime garbage = Runtime.getRuntime();
+		garbage.gc();
 	}
 
 	/**
