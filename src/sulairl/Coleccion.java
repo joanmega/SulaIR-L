@@ -28,7 +28,6 @@ import org.apache.tika.sax.BodyContentHandler;
 import org.xml.sax.ContentHandler;
 import org.xml.sax.SAXException;
 
-
 /**
  * @author José Antonio Medina García
  */
