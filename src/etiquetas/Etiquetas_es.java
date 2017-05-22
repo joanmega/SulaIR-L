@@ -49,7 +49,7 @@ public class Etiquetas_es extends ListResourceBundle{
 			{"cbEtapa_Preprocesado" , "Preprocesamiento de documentos"},
 			{"cbEtapa_Indexacion" , "Indexación"},
 			{"cbEtapa_Consultas" , "Consultas"},
-			{"titulo_ventana_dialog_coleccion", "Seleccione la carpeta de la colección"},
+			{"titulo_ventana_dialog_coleccion", "Seleccione la carpeta de la colección (.html, .htm, .xml, .txt, .pdf, .doc, .docx)"},
 			{"titulo_ventana_dialog_stopWord", "Seleccione el archivo stopWord"},
 			{"optionDialog_coleccion_no_seleccionada", "No se ha seleccionado una colección"},
                         {"optionDialog_stopWord_no_seleccionado", "No se ha seleccionado un archivo de palabras vacías"},
@@ -81,7 +81,9 @@ public class Etiquetas_es extends ListResourceBundle{
 				{"contenido_pane_ayuda_configuracion", "En esta ventana se podrá crear una colección nueva o cargar una ya existente."
 				+ "<ul>"
 					+ "<li>Para crear una nueva colección primero debemos de <b>seleccionar una carpeta</b> en la que se encuentre la colección. Para ello "
-					+ "pulsamos en examinar donde dice <b>Directorio de la colección de documentos</b>. Acto seguido le pondremos un nombre a la colección.<br><br>"
+					+ "pulsamos en examinar donde dice <b>Directorio de la colección de documentos</b>. "
+					+ "Las extensiones compatibles son: <b>.html</b>,  <b>.htm</b>,  <b>.xml</b>,  <b>.txt</b>,  <b>.pdf</b>,  <b>.doc</b> y  <b>.docx</b>. "
+					+ "Acto seguido le pondremos un nombre a la colección.<br><br>"
 					+ "El siguiente paso es seleccionar si vamos a utilizar un <b>archivo de palabras vacías</b> o no. Si vamos a utilizar un archivo de palabras vacías "
 					+ "este deberá estar en formato txt. Para cargarlo debemos de pulsar en <b>examinar</b> en el apartado <b>Utilizar archivo de palabras vacías</b></li><br>"
 					+ "<li>Para cargar una coleccion debemos de tener colecciones ya creadas.<br><br>"

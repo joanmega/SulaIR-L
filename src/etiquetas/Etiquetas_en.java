@@ -52,7 +52,7 @@ public class Etiquetas_en extends ListResourceBundle{
 			{"titulo_ventana_dialog_coleccion", "Select the collection folder"},
 			{"titulo_ventana_dialog_stopWord", "Select the stopword file"},
 			{"optionDialog_coleccion_no_seleccionada", "Collection no selected"},
-                        {"optionDialog_stopWord_no_seleccionado", "Stopword no selected"},
+            {"optionDialog_stopWord_no_seleccionado", "Stopword no selected"},
 			{"optionDialog_coleccion_no_cargada", "Make sure you have a collection loaded"},
 			{"optionDialog_nombre_coleccion_vacio", "Write a name for collection work folder"},
 			{"optionDialog_stopword_no_cargado", "Make sure you have a stopword file loaded"},
@@ -81,6 +81,7 @@ public class Etiquetas_en extends ListResourceBundle{
 				{"contenido_pane_ayuda_configuracion", "This window allows us to create a new collection or to load an existing one."
 				+ "<ul>"
 					+ "<li>To create a new collection we must first select the folder in which the collection is located. To do this click on <b>Search</b> in the <b>Document collection directory</b>. "
+					+ "Compatible extensions are: <b>.html</b>, <b>.htm</b>, <b>.xml</b>, <b>.txt</b>, <b>.pdf</b>, <b>.doc</b> and <b>.docx</b>"
 					+ "Then we will name the collection.<br><br>"
 					+ "The next step is to select whether or not to use a stopword file. If we are going to use a stopword file it should have txt extension. To load it we must click on "
 					+ "<b>Search</b> where it says <b>Use stopwords file</b></li><br>"
