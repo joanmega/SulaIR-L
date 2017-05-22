@@ -37,7 +37,7 @@ public class Etiquetas_en extends ListResourceBundle{
 			{"etiqueta_label_docColeccion", "Document collection directory"},
 			{"etiqueta_label_nomColeccion", "Collection name"},
 			{"etiqueta_checkbox_cbStopWords", "Use stopwords file"},
-			{"etiqueta_borde_idiomaColeccion", "Collection's language"},
+			{"etiqueta_borde_idiomaColeccion", "Collection language"},
 			{"etiqueta_radioButton_espanol", "Spanish"},
 			{"etiqueta_radioButton_ingles", "English"},
 			{"etiqueta_button_examinar", "Search..."},
@@ -46,27 +46,27 @@ public class Etiquetas_en extends ListResourceBundle{
 			{"etiqueta_label_colecciones","Collections"},
 			{"etiqueta_label_etapaInicio","Start stage"},
 			{"etiqueta_boton_borrar" , "Delete"},
-			{"cbEtapa_Preprocesado" , "Documents's pre-processing"},
+			{"cbEtapa_Preprocesado" , "Documents pre-processing"},
 			{"cbEtapa_Indexacion" , "Indexing"},
 			{"cbEtapa_Consultas" , "Queries"},
-			{"titulo_ventana_dialog_coleccion", "Select the collection's folder"},
+			{"titulo_ventana_dialog_coleccion", "Select the collection folder"},
 			{"titulo_ventana_dialog_stopWord", "Select the stopword file"},
 			{"optionDialog_coleccion_no_seleccionada", "Collection no selected"},
                         {"optionDialog_stopWord_no_seleccionado", "Stopword no selected"},
 			{"optionDialog_coleccion_no_cargada", "Make sure you have a collection loaded"},
-			{"optionDialog_nombre_coleccion_vacio", "Write a name for collection's work folder"},
-			{"optionDialog_stopword_no_cargado", "Make sure you have a stopword's file loaded"},
-			{"optionDialog_coleccion_existente", "Exists a collection with this name. Overwrite?"},
+			{"optionDialog_nombre_coleccion_vacio", "Write a name for collection work folder"},
+			{"optionDialog_stopword_no_cargado", "Make sure you have a stopword file loaded"},
+			{"optionDialog_coleccion_existente", "There exists a collection with this name. Overwrite?"},
 			{"optionDialog_titulo_coleccion_existente", "Existing collection"},
 			{"optionDialog_directorio_sin_documentos", "The folder no contains any file txt, html or xml"},
-			{"etiqueta_optionDialog_creacionArchivoErronea", "ERROR: Try another name, make sure the folder is closed, or check the permissions."},
-			{"etiqueta_optionDialog_cargaArchivoErronea", "ERROR: Can not save the configuration file. Make sure configuration file exist."},
+			{"etiqueta_optionDialog_creacionArchivoErronea", "ERROR: Try another name, make sure the folder is closed or check the permissions."},
+			{"etiqueta_optionDialog_cargaArchivoErronea", "ERROR: The configuration file can not be save. Make sure configuration file exists."},
 			
 			// Carga de colección
 			
-				{"optionDialog_borrar_coleccion_existente", "Are you sure you want to delete the collection "},
-				{"optionDialog_titulo_borrar_coleccion", "Delete colection"},
-				{"etiqueta_optionDialog_cargaColeccionErronea1", "ERROR: Can not load the stage "},
+				{"optionDialog_borrar_coleccion_existente", "Are you sure you want to delete the collection?"},
+				{"optionDialog_titulo_borrar_coleccion", "Remove colection"},
+				{"etiqueta_optionDialog_cargaColeccionErronea1", "ERROR: the collection could not be loade at the stage "},
 				{"etiqueta_optionDialog_cargaColeccionErronea2", "Only finished until the stage "},
 				{"etiqueta_optionDialog_cargaColeccionErronea3", "Make sure the previous steps are completed."},
 				{"etiqueta_optionDialog_numDocOriginalesErroneo","ERROR: Missing documents in original folder"},
@@ -78,15 +78,15 @@ public class Etiquetas_en extends ListResourceBundle{
 				
 				{"etiqueta_borde_panel_ayuda_configuracion","Help"},
 				{"titulo_ventana_ayuda_configuracion","Help"},
-				{"contenido_pane_ayuda_configuracion", "This window allows us to create a new collection or to load an existing collection."
+				{"contenido_pane_ayuda_configuracion", "This window allows us to create a new collection or to load an existing one."
 				+ "<ul>"
-					+ "<li>To create a new collection we must first select a folder in which the collection is located. To do this click on <b>Search</b> in the <b>Document collection directory</b>. "
+					+ "<li>To create a new collection we must first select the folder in which the collection is located. To do this click on <b>Search</b> in the <b>Document collection directory</b>. "
 					+ "Then we will name the collection.<br><br>"
-					+ "The next step is to select whether or not to use an stopword's file. If we are going to use an stopword's file it should have txt extension. To load it we must click on "
+					+ "The next step is to select whether or not to use a stopword file. If we are going to use a stopword file it should have txt extension. To load it we must click on "
 					+ "<b>Search</b> where it says <b>Use stopwords file</b></li><br>"
 					+ "<li>To load a collection we must have already created collections.<br><br>"
-					+ "First we must <b>select the collection</b> we want to load and then select the <b>stage of the process</b> from which we want to load. Remember that we can only load until the stage we "
-					+ "have completed in the creation of the information retrieval system.</li>"
+					+ "First we must <b>select the collection</b> we want to load and then select the <b>stage of the process</b> from which we want to load it. Remember that we can only load until the stage we "
+					+ "have completed in the process of creation of the information retrieval system.</li>"
 				+ "</ul>"},
 			
 		// Ventana de procesamiento de documentos
@@ -127,24 +127,24 @@ public class Etiquetas_en extends ListResourceBundle{
 
 				// Palabras vacías
 
-					{"etiqueta_tab_tokenizacion_stopwords", "Stop words"},
-					{"etiqueta_borde_palabrasVacias_conSW", "File with stop words"},
-					{"etiqueta_borde_palabrasVacias_sinSW", "File without stop words"},
-					{"etiqueta_boton_iniciar_SW", "Start stop words"},
+					{"etiqueta_tab_tokenizacion_stopwords", "Stopwords"},
+					{"etiqueta_borde_palabrasVacias_conSW", "File with stopwords"},
+					{"etiqueta_borde_palabrasVacias_sinSW", "File without stopwords"},
+					{"etiqueta_boton_iniciar_SW", "Start stopwords identification"},
 
 				// Stemming
 
 					{"etiqueta_tab_tokenizacion_stemming", "Stemming"},
-					{"etiqueta_borde_stemming_conLemas", "No stemmized File"},
-					{"etiqueta_borde_stemming_sinLemas", "Stemmized File"},
+					{"etiqueta_borde_stemming_conLemas", "No stemmed File"},
+					{"etiqueta_borde_stemming_sinLemas", "Stemmed File"},
 					{"etiqueta_boton_inicio_stemming", "Start stemming"},
 					{"etiqueta_boton_crear_indice", "Create index"},
-					{"etiqueta_label_stemming_se_lematiza", "It is stemmized"},
+					{"etiqueta_label_stemming_se_lematiza", "It is stemmed"},
 			
 			// Ventana de creación del índice
 		
 				{"titulo_creacion_indice", "Processing index"},
-				{"etiqueta_label19_creacion_indice","In this stage happen the creation of"},
+				{"etiqueta_label19_creacion_indice","In this stage it is happening the creation of"},
 				{"etiqueta_label20_creacion_indice","invert index"},
 				{"etiqueta_label21_creacion_indice","This stage can be slow because of the amount of documents"},
 				{"etiqueta_label22_creacion_indice","that can be in the collection"},
@@ -178,6 +178,8 @@ public class Etiquetas_en extends ListResourceBundle{
 					{"etiqueta_borde_indexacion_graficasDocumentos", "Documents"},
 					{"etiqueta_borde_indexacion_graficasTerminos", "Terms"},
 					{"boton_indexacion_guardar_grafica", "Save graph"},
+					{"etiqueta_radioButton_grafica_descendente", "Graph down"},
+					{"etiqueta_radioButton_grafica_ascendente", "Graph up"},
 
 			// Consultas
 					
@@ -207,7 +209,7 @@ public class Etiquetas_en extends ListResourceBundle{
 				// Booleana
 				
 					{"etiqueta_tab_busqueda_booleana", "Boolean Querying"},
-					{"etiqueta_tab_busqueda_booleana_lucene", "Query Lucene:"},
+					{"etiqueta_tab_busqueda_booleana_lucene", "Lucene Query:"},
 				
 				// Probabilística
 				
@@ -225,7 +227,7 @@ public class Etiquetas_en extends ListResourceBundle{
 					{"etiqueta_borde_ayuda_descripcion", "Description"},
 					{"lista_ayuda_contenido_0","Retrieval Information System"},
 					{"lista_ayuda_contenido_1","Tokenization process"},
-					{"lista_ayuda_contenido_2","Stop words process"},
+					{"lista_ayuda_contenido_2","Stopwords process"},
 					{"lista_ayuda_contenido_3","Stemming process"},
 					{"lista_ayuda_contenido_4", "Indexing process"},
 					{"lista_ayuda_contenido_5","Full index"},
@@ -238,8 +240,8 @@ public class Etiquetas_en extends ListResourceBundle{
 			// Sistema de recuperación de información
 					
 				{"ayuda_cuadro_texto_contenido_0", "An <b>Information Retrieval System</b> is a system by which it receives a query from a user and must find, "
-					+ "within a collection of documents, the location of the information required by the user.<br><br>"
-					+ "Once the query is done, the results are retrieved as an ordered list of documents."},
+					+ "within a collection of documents, those which are relevant to the query submitted by the user.<br><br>"
+					+ "Once the search process is finished, the results are retrieved as an ordered list of documents."},
 			
 			// Proceso de tokenización
 			
@@ -253,9 +255,9 @@ public class Etiquetas_en extends ListResourceBundle{
 				
 			// Proceso de eliminación de palabras vacías.
 			
-				{"ayuda_cuadro_texto_contenido_2", "The <b>Stop words</b> are terms that are repeated many times and, therefore, are a poor indicator of content. They are words like articles, prepositions, conjunctions, "
+				{"ayuda_cuadro_texto_contenido_2", "The <b>Stop words</b> are terms that are repeated many times and, therefore, are poor indicators of content. They are words like articles, prepositions, conjunctions, "
 					+ "auxiliary verbs...<br><br>"
-					+ "Removing these words also saved us a memory by not having to index them.<br><br>"
+					+ "Removing these words also saved us  memory by not having to index them.<br><br>"
 					+ "In the <b>Stop words</b> screen we can load the first tokenized document in the collection by pressing <b>Start stop words</b>. "
 					+ "The tokenized document will be loaded in the upper box and in the lower part we can see the result of the deletion of the empty words by clicking on the "
 					+ "<b>Next term</b> button or the <b>Finish the document</b> (complete document). We can also click on <b>Next document</b> to go to the next tokenized document in the collection.<br><br>"
@@ -279,14 +281,14 @@ public class Etiquetas_en extends ListResourceBundle{
 						+ "<li>A <b>field</b> is a named sequence of <b>terms</b>.</li>"
 						+ "<li>A <b>term</b> is a <b>string</b>.</li>"
 					+ "</ul>"
-					+ "Lucene's index falls into the family of indexes known as an <b>inverted index</b>. This is because it can list, for a term, the documents that contain it. This is the inverse of the natural relationship, in "
+					+ "Lucene index falls into the family of indexes known as an <b>inverted index</b>. This is because it can list, for a term, the documents that contain it. This is the inverse of the natural relationship, in "
 					+ "which documents list terms. The index stores statistics about terms in order to make term-based search more efficient.<br><br>"},
 			
 			// Ficha de indice completo
 				
-			{"ayuda_cuadro_texto_contenido_5", "In the <b>Full index</b> tab we have a table with all collection's terms sorted by term's number. This table also shows the number of documents that the "
-				+ "term contains and the <b>Idf</b>. All these columns can be sorted in ascending order or descending by their value by clicking on the column's header.<br><br>"
-				+ "To the right of the full index's table there is the table of <b>term information</b>. This table shows the document number where the term is located, the position in the stemmed document, "
+			{"ayuda_cuadro_texto_contenido_5", "In the <b>Full index</b> tab we have a table with all collection terms sorted by term id. This table also shows the number of documents that the "
+				+ "term contains and the <b>Idf</b>. All these columns can be sorted in ascending order or descending by their value by clicking on the column header.<br><br>"
+				+ "To the right of the full index table there is the table of <b>term information</b>. This table shows the document number where the term is located, the position in the stemmed document, "
 				+ "the start offset and the end offset. Clicking on any of the rows in the table will load in the lower frame the tagged file and highlight the word in the selected position and document.<br><br>"
 				+ "On the right side you can see information about the index"},
 			
@@ -302,9 +304,9 @@ public class Etiquetas_en extends ListResourceBundle{
 			
 			// Ficha de consulta vectorial
 				
-			{"ayuda_cuadro_texto_contenido_7", "In the <b>vectorial querying</b> tab we can make a query using the <b>vector space model</b>.<br><br>"
-				+ "In this model, documents and queries are part of a vector t-space where 't' is the number of indexed terms. Each term is a dimension and its weight is equal to its <b>Tf-idf</b>"
-				+ "This model not require weights to be Tf-idf values, but Tf-idf values are believed to produce search results of high quality. "
+			{"ayuda_cuadro_texto_contenido_7", "In the <b>vectorial querying</b> tab we can formulate a query using the <b>vector space model</b>.<br><br>"
+				+ "In this model, documents and queries are part of a vector in a t-space where 't' is the number of indexed terms. Each term is a dimension and its weight is equal to its <b>Tf-idf</b>"
+				+ "This model do not require weights to be Tf-idf values, but Tf-idf values are believed to produce search results of high quality. "
 				+ "The score of document <b>d</b> for query <b>q</b> is the <b>cosine similarity</b> of the weighted query vectors V(q) and V(d)."
 				+ "It is given by the expression:<br><br>"
 				+ "<table cellpadding=\"2\" cellspacing=\"2\" border=\"0\" style=\"margin-left:auto; margin-right:auto\">"
@@ -326,33 +328,33 @@ public class Etiquetas_en extends ListResourceBundle{
 					+ "<li>|V(q)| and |V(d)| are their Euclidean norms.</li>"
 				+ "</ul>"
 		
-				+ "To make a query we will enter a text in the box reserved for it and press <b>ENTER</b> or the button <b>Search</b>. We can also put the maximum number of documents that we want to retrieve "
+				+ "To formulate a query we will enter a text in the box reserved for it and press <b>ENTER</b> or the button <b>Search</b>. We can also put the maximum number of documents that we want to retrieve "
 				+ "in the right drop-down list. Once the query is done, we will obtain the best positioned documents, the transformation of the query, the time taken to retrieve the documents and the "
 				+ "total number of documents retrieved.<br><br>"
-				+ "If we want to see where in the document are the terms we are looking for we can click on the document in the table and it will automatically be loaded in the box on the right. "
+				+ "If we want to see where in the document the terms are place we are looking for we can click on the document in the table and it will automatically be loaded in the box on the right. "
 				+ "In addition, we can see an explanation of how it has come to get that weight for that document by clicking on the <b>Details</b> button."},
 			
 			// Ficha consulta booleana
 			
-			{"ayuda_cuadro_texto_contenido_8", "In the <b>Boolean query</b> tab we can make a query indicating which terms we want to find in a document or not. For this we will use the logical operators AND, OR, NOT and the "
+			{"ayuda_cuadro_texto_contenido_8", "In the <b>Boolean query</b> tab we can formulate a query indicating which terms we want to find in a document or not. For this we will use the logical operators AND, OR, NOT and the "
 				+ "parentheses. The results will be the documents that fulfill that condition and, therefore, there is no weight.<br><br>"
 				+ "To perform a Boolean query we must enter the query correctly in the text box reserved for it and then press ENTER or the search button. We can also put the maximum number of documents we want "
-				+ "to retrieve from the right-hand drop-down list. Once the query is done we will obtain the documents that fulfill it, the transformation of the query timed, the time taken to retrieve the "
+				+ "to retrieve from the right-hand drop-down list. Once the query is solved we will obtain the documents that fulfill it, the transformation of the query timed, the time taken to retrieve the "
 				+ "documents, the number of documents retrieved and a version of the query readable for the user in which it can be seen as Lucene Uses the <b>+ (AND)</b>, <b>- (NOT)</b> operators, and the "
 				+ "<b>parentheses</b>. For the <b>OR</b> operator does not put anything. If we want to see where in the document are the terms we are looking for we can click on the document in the table and it will "
 				+ "automatically be loaded in the box on the right."},
 			
 			// Ficha consulta probabilística
 			
-			{"ayuda_cuadro_texto_contenido_9", "In the <b>probabilistic query</b> tab we can make a query using the <b>BM25</b> ranking algorithm.<br><br>"
+			{"ayuda_cuadro_texto_contenido_9", "In the <b>probabilistic query</b> tab we can formulate a query using the <b>BM25</b> ranking algorithm.<br><br>"
 				+ "This algorithm calculates the probability that a document is relevant to a query depending on the terms in them. It is based on the model of binary independence with which "
-				+ "it establishes the weights of the terms in the documents and in the consultations. Use probabilistic arguments and experimental validation. <br>" 
+				+ "it establishes the weights of the terms in the documents and in the consultations. It uses probabilistic arguments and experimental validation. <br>" 
 				+ "BM25 has performed well in retrieval tests in TREC (<b>T</b>ext <b>RE</b>trieval <b>C</b>onference) and since then has influenced the classification algorithms Of commercial search engines, "
 				+ "including web search engines <br><br>" 
 				+ "To perform a probabilistic query we must enter the text to be searched in the box reserved for it, the normalization*, the saturation* and then press <b>ENTER</b> or the <b>search</b> button. "
-				+ "We can also put the maximum number of documents we want to retrieve from the right-hand drop-down list. Once the query is done, we will obtain the best positioned documents, "
+				+ "We can also input the maximum number of documents we want to retrieve from the right-hand drop-down list. Once the query is done, we will obtain the best positioned documents, "
 				+ "the transformation of the query, the time taken to recover the documents and the total number of documents retrieved."
-				+ "If we want to see where in the document are the terms we are looking for we can click on the document in the table and it will automatically be loaded in the box on the right. "
+				+ "If we want to see where in the document the terms that we are looking for are placed, we can click on the document in the table and it will automatically be loaded in the box on the right. "
 				+ "In addition, we can see an explanation of how it has come to get that weight for that document by clicking on the <b>Details</b> button." 
 				+ "*<ul><li>The <b>saturation</b> controls non-linear term frequency normalization</li><li>The <b>normalization</b> controls to what degree document length normalizes tf values.</li></ul>"},
 			
@@ -371,7 +373,7 @@ public class Etiquetas_en extends ListResourceBundle{
 		
 		// Ventana visor de documentos.
 		
-			{"etiqueta_borde_visorDocumentos_stopword", "Stop word file"},
+			{"etiqueta_borde_visorDocumentos_stopword", "Stopword file"},
 			{"etiqueta_borde_visorDocumentos_archivos", "Documents"},
 			{"etiqueta_borde_visorDocumentos_descripcion", "Description"},
 			{"etiqueta_ventana_titulo_visorDocumentos", "Original document viewer"},

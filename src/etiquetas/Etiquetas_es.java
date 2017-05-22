@@ -178,6 +178,8 @@ public class Etiquetas_es extends ListResourceBundle{
 					{"etiqueta_borde_indexacion_graficasDocumentos", "Documentos"},
 					{"etiqueta_borde_indexacion_graficasTerminos", "Términos"},
 					{"boton_indexacion_guardar_grafica", "Guardar gráfica"},
+					{"etiqueta_radioButton_grafica_descendente", "Descendente"},
+					{"etiqueta_radioButton_grafica_ascendente", "Ascendente"},
 				
 			// Consultas
 								

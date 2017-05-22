@@ -3442,7 +3442,7 @@ public class Aplicacion extends javax.swing.JFrame {
 					BigDecimal bd = new BigDecimal(tf_idf);
 					bd = bd.setScale(4, BigDecimal.ROUND_HALF_UP);
 					lTfxIdf.setText(""+ bd);
-					System.out.println(similarity.tf(docEnum.freq()) + " x " + Float.parseFloat(jTablaIndiceCompleto.getValueAt(jTablaIndiceCompleto.getSelectedRow(), 4).toString()) + " = " + tf_idf);
+//					System.out.println(similarity.tf(docEnum.freq()) + " x " + Float.parseFloat(jTablaIndiceCompleto.getValueAt(jTablaIndiceCompleto.getSelectedRow(), 4).toString()) + " = " + tf_idf);
 				}
             }
             if (!lArchivoStemmingIndice.getText().equals(f.getName())){
@@ -4596,6 +4596,8 @@ public class Aplicacion extends javax.swing.JFrame {
 			pGraficasDocumentos.setBorder(javax.swing.BorderFactory.createTitledBorder(ResourceBundle.getBundle("etiquetas.Etiquetas_"+SulaIRL.idioma).getString("etiqueta_borde_indexacion_graficasDocumentos")));
 			pGraficasTerminos.setBorder(javax.swing.BorderFactory.createTitledBorder(ResourceBundle.getBundle("etiquetas.Etiquetas_"+SulaIRL.idioma).getString("etiqueta_borde_indexacion_graficasTerminos")));
 			bGrafica.setText(ResourceBundle.getBundle("etiquetas.Etiquetas_"+SulaIRL.idioma).getString("boton_indexacion_guardar_grafica"));
+			jRadioAsc.setText(ResourceBundle.getBundle("etiquetas.Etiquetas_"+SulaIRL.idioma).getString("etiqueta_radioButton_grafica_ascendente"));
+			jRadioDesc.setText(ResourceBundle.getBundle("etiquetas.Etiquetas_"+SulaIRL.idioma).getString("etiqueta_radioButton_grafica_descendente"));
 	
 
 			// Busquedas
